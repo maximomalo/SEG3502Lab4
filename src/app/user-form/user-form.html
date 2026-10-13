@@ -1,0 +1,47 @@
+<h1>User Information</h1>
+
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+  <div>
+    <label for="firstName">First name *</label>
+    <input id="firstName" type="text" formControlName="firstName">
+
+    @if (userForm.controls.firstName.touched &&
+         userForm.controls.firstName.invalid) {
+      <p class="error">First name is required.</p>
+    }
+  </div>
+
+  <div>
+    <label for="lastName">Last name *</label>
+    <input id="lastName" type="text" formControlName="lastName">
+
+    @if (userForm.controls.lastName.touched &&
+         userForm.controls.lastName.invalid) {
+      <p class="error">Last name is required.</p>
+    }
+  </div>
+
+  <div>
+    <label for="phone">Phone number</label>
+    <input id="phone" type="tel" formControlName="phone">
+
+    @if (userForm.controls.phone.touched &&
+         userForm.controls.phone.invalid) {
+      <p class="error">
+        Enter 10 digits. The first and fourth digits cannot be 0.
+      </p>
+    }
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" type="email" formControlName="email">
+
+    @if (userForm.controls.email.touched &&
+         userForm.controls.email.invalid) {
+      <p class="error">Enter a valid email address.</p>
+    }
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

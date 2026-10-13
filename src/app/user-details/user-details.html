@@ -1,0 +1,27 @@
+<h1>Submitted Information</h1>
+
+@if (user) {
+  <table>
+    <thead>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Phone number</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.phone || 'Not provided' }}</td>
+        <td>{{ user.email || 'Not provided' }}</td>
+      </tr>
+    </tbody>
+  </table>
+} @else {
+  <p>No information has been submitted yet.</p>
+}
+
+<a routerLink="/form">Back to form</a>
