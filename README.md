@@ -1,6 +1,6 @@
 # Lab4Form
 
-Groupe 23
+Groupe 23 Nicola Baker, 300360908 Maxime Malouf, 300238380
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.26.
 
